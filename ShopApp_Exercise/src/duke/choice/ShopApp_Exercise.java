@@ -16,6 +16,11 @@ public class ShopApp_Exercise {
      */
     public static void main(String[] args) {
         System.out.println("Welcome to the Duke Choice Shop");
+        
+        Customer c1 = new Customer();
+        c1.name = "Pinkey"; 
+        System.out.println("Customer is " + c1.name);
+        
     }
     
 }
