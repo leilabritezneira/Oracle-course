@@ -21,9 +21,10 @@ public class ShopApp_Exercise {
 
         System.out.println("Welcome to the Duke Choice Shop");
 
-        Customer c1 = new Customer();
-        c1.setName("Pinkey");
-        c1.setSize("S");
+        Customer c1 = new Customer("Pinkey", 3);
+        
+        //c1.setName("Pinkey");
+        //c1.setSize("S");
 
         Clothing item1 = new Clothing();
         Clothing item2 = new Clothing();
@@ -56,7 +57,7 @@ public class ShopApp_Exercise {
         
         c1.addItems(items);
         
-        c1.setSize(measurement);
+        //c1.setSize(measurement);
         
         //System.out.println("Customer is " + c1.getName() + ", " + c1.getSize());
         System.out.println("Customer is " + c1.getName() + ", " + c1.getSize() + ", " + c1.getTotalClothingCost());
