@@ -6,6 +6,11 @@
 package duke.choice;
 
 import java.util.Arrays;
+import io.helidon.webserver.Routing;
+import io.helidon.webserver.ServerConfiguration;
+import io.helidon.webserver.WebServer;
+import java.net.InetAddress;
+import java.net.UnknownHostException;
 
 /**
  *
@@ -34,7 +39,17 @@ public class ShopApp_Exercise {
         Clothing item2 = new Clothing("Orange T-Shirt", 10.5, "S");
 
         Clothing[] items = {item1, item2, new Clothing("Green Scarf", 5.0, "S"), new Clothing("Blue T-Shirt", 10.5, "S")};
-
+        
+            ItemList list = new ItemList(items); 
+            Routing routing = Routing.builder()
+                    .get("/items", list).build();
+            ServerConfiguration config = ServerConfiguration.builder()
+                    .bindAddress(InetAddress.getLocalHost())
+                    .port(8888).build();
+            WebServer ws = WebServer.create(config, routing);
+            ws.start();
+        
+        
         /*
         item1.setDescription("Blue jacket");
         item1.setPrice(20.9);
@@ -106,6 +121,7 @@ public class ShopApp_Exercise {
             //System.out.println("Items : " + item.getDescription());
             System.out.println("Items output: " + item);
         }
+        
     }
     
     
