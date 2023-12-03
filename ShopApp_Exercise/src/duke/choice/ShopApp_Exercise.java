@@ -78,7 +78,8 @@ public class ShopApp_Exercise {
         */
         //System.out.println("Total : " + total);
         for (Clothing item: c1.getItems()){ 
-            System.out.println("Items : " + item.getDescription());
+            //System.out.println("Items : " + item.getDescription());
+            System.out.println("Items output: " + item);
         }
         
         int averange = 0;
@@ -91,6 +92,7 @@ public class ShopApp_Exercise {
             }
         }
         try {
+            averange = (count == 0) ? 0 : averange / count;
             averange = averange / count;
             System.out.println("Averange price " + averange + ", Count " + count);
         } catch (ArithmeticException e) {
