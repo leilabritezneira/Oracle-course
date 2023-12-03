@@ -5,6 +5,8 @@
  */
 package duke.choice;
 
+import java.util.Arrays;
+
 /**
  *
  * @author leilamarilinabritezneira
@@ -99,6 +101,11 @@ public class ShopApp_Exercise {
             System.out.println("Don't devide by 0");
         }
 
+        Arrays.sort(c1.getItems());
+        for (Clothing item: c1.getItems()){ 
+            //System.out.println("Items : " + item.getDescription());
+            System.out.println("Items output: " + item);
+        }
     }
     
     
