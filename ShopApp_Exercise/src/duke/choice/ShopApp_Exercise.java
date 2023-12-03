@@ -26,7 +26,7 @@ public class ShopApp_Exercise {
         //c1.setName("Pinkey");
         //c1.setSize("S");
 
-        System.out.println("Min price" + Clothing.MIN_PRICE);
+        System.out.println("Min price " + Clothing.MIN_PRICE);
         
         Clothing item1 = new Clothing("Blue jacket", 20.9, "M");
         Clothing item2 = new Clothing("Orange T-Shirt", 10.5, "S");
@@ -80,6 +80,23 @@ public class ShopApp_Exercise {
         for (Clothing item: c1.getItems()){ 
             System.out.println("Items : " + item.getDescription());
         }
+        
+        int averange = 0;
+        int count = 0;
+        
+        for (Clothing item : c1.getItems()){
+            if (item.getSize().equals("L")){
+                count ++;
+                averange += item.getPrice();
+            }
+        }
+        try {
+            averange = averange / count;
+            System.out.println("Averange price " + averange + ", Count " + count);
+        } catch (ArithmeticException e) {
+            System.out.println("Don't devide by 0");
+        }
+
     }
     
     
