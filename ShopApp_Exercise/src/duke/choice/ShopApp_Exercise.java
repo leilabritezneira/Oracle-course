@@ -40,6 +40,7 @@ public class ShopApp_Exercise {
 
         Clothing[] items = {item1, item2, new Clothing("Green Scarf", 5.0, "S"), new Clothing("Blue T-Shirt", 10.5, "S")};
         
+        try{
             ItemList list = new ItemList(items); 
             Routing routing = Routing.builder()
                     .get("/items", list).build();
@@ -48,7 +49,9 @@ public class ShopApp_Exercise {
                     .port(8888).build();
             WebServer ws = WebServer.create(config, routing);
             ws.start();
-        
+        } catch(UnknownHostException ex){
+            ex.printStackTrace();
+        }
         
         /*
         item1.setDescription("Blue jacket");
@@ -96,7 +99,7 @@ public class ShopApp_Exercise {
         //System.out.println("Total : " + total);
         for (Clothing item: c1.getItems()){ 
             //System.out.println("Items : " + item.getDescription());
-            System.out.println("Items output: " + item);
+            //System.out.println("Items output: " + item);
         }
         
         int averange = 0;
@@ -119,7 +122,7 @@ public class ShopApp_Exercise {
         Arrays.sort(c1.getItems());
         for (Clothing item: c1.getItems()){ 
             //System.out.println("Items : " + item.getDescription());
-            System.out.println("Items output: " + item);
+            //System.out.println("Items output: " + item);
         }
         
     }
