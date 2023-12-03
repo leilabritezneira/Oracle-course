@@ -9,8 +9,10 @@ package duke.choice;
  *
  * @author leilamarilinabritezneira
  */
-public class Customer {
+public class Clothing {
     
-    String name;
+    String description; 
+    double price;
+    String size = "M";
     
 }
