@@ -53,21 +53,28 @@ public class ShopApp_Exercise {
         // System.out.println("Total : " + total);
 
         int measurement = 8;
+        
+        c1.addItems(items);
+        
         c1.setSize(measurement);
         
-        System.out.println("Customer is " + c1.getName() + ", " + c1.getSize());
-        
+        //System.out.println("Customer is " + c1.getName() + ", " + c1.getSize());
+        System.out.println("Customer is " + c1.getName() + ", " + c1.getSize() + ", " + c1.getTotalClothingCost());
+
+        /*
         for (Clothing item: items){
             if (c1.getSize().equals(item.getSize())){
                 total = total + item.getPrice(); 
                 System.out.println("Item: " + item.getDescription() + ", " + item.getPrice() + ", " + item.getSize());
-                
                 total = total + total * tax;
-                
                 if (total > 15) {break;}
             }
         }
-        System.out.println("Total : " + total);
+        */
+        //System.out.println("Total : " + total);
+        for (Clothing item: c1.getItems()){ 
+            System.out.println("Items : " + item.getDescription());
+        }
     }
     
     

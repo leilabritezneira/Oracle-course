@@ -10,9 +10,26 @@ package duke.choice;
  * @author leilamarilinabritezneira
  */
 public class Customer {
-    
+
     private String name;
     private String size;
+    private Clothing[] items;
+
+    public void addItems(Clothing[] someItems) {
+        items = someItems;
+    }
+
+    public Clothing[] getItems() {
+        return items;
+    }
+
+    public double getTotalClothingCost() {
+        double total = 0.0;
+        for (Clothing item : items) {
+            total = total + item.getPrice();
+        }
+        return total;
+    }
 
     public String getName() {
         return name;
@@ -29,7 +46,7 @@ public class Customer {
     public void setSize(String size) {
         this.size = size;
     }
-    
+
     public void setSize(int measurement) {
         switch (measurement) {
             case 1:
@@ -50,6 +67,6 @@ public class Customer {
             default:
                 setSize("X");
         }
-        
+
     }
 }
