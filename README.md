@@ -1,5 +1,5 @@
 <div align="end">
-  :uk: :es: :fr: 
+  <img src="img/Badge.png" alt="">
 </div>
 
 # Java Explorer Oracle Course
@@ -20,3 +20,7 @@
 </dl>
 
 <br> 🖥️ Used technology: Java
+
+<div align="center">
+  <img src="img/Finalization course.png" alt="">
+</div>
