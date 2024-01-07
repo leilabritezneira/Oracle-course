@@ -34,15 +34,16 @@ public class HRApp {
         Employee[] emps = dept1.getEmployees();
         
         for(Employee emp : emps){
-            System.out.println("Emp "+emp);            
+            System.out.println("Emp "+ emp);            
         }
         
         System.out.println("Total salary: " +dept1.getTotalSalary());
         System.out.println("Average salary: " +dept1.getAverageSalary());
         
+        System.out.println("Emp " + dept1.getEmployeeByID(101));
         System.out.println("Emp " + dept1.getEmployeeByID(111));
-
-
+        
+        System.out.println(dept1.getName() + " departament has " + dept1.getEmployeeCount() + " employees");
     }
     
 }
